@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Cyber Pets | Create your own virtual pet</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <h1>Cyber Pets</h1>
+      </header>
+      <main class="main-content">
+         <div id="welcome-screen">
+            <p class="intro-text">Create &amp; take care of your own virtual pet. Choose an animal below to get
+               started.</p>
+            <div class="image-group">
+               <div class="image">
+                  <img src="images/animal-dog.jpg" alt="cute puppy lying on yellow floor looking up" id="dog-img"
+                     class="animal-img dog-img">
+               </div>
+               <div class="image">
+                  <img src="images/animal-cat.jpg" alt="white and brown cat lying on red sofa" id="cat-img"
+                     class="animal-img cat-img">
+               </div>
+               <div class="image">
+                  <img src="images/animal-fish.jpg" alt="shocked looking fish" id="fish-img"
+                     class="animal-img fish-img">
+               </div>
+               <div class="image">
+                  <img src="images/animal-lizard.jpg" alt="cute brown bunny sits on white fluffy fabric" id="lizard-img"
+                     class="animal-img lizard-img">
+               </div>
+            </div>
+         </div>
+         <div class="pet-interface" id="pet-interface">
+            <div class="pet-info">
+               <div class="main-image">
+                  <img src="#" alt="pet" class="pet-img" id="pet-img">
+               </div>
+               <div class="pet-stats" id="pet-stats">
+                  <p><span class="pet-stats-style">Name: </span><span id="insert-name"></span></p>
+                  <label for="happiness-level" class="pet-stats-style">Happiness: </label>
+                  <progress id="happiness-level" max="100" value="40"></progress>
+                  <p id="pet-emotion" class="pet-emotion"></p>
+               </div>
+            </div>
+            <div class="buttons">
+               <button class="action-button" id="feed-button">Feed</button>
+               <button class="action-button" id="stroke-button">Stroke</button>
+               <button class="action-button" id="wash-button">Wash</button>
+               <button class="action-button" id="play-button">Play</button>
+            </div>
+            <p class="start-again" id="start-again">Start again</p>
+         </div>
+      </main>
+
+   </div>
+
+   <script src="main.js"></script>
+   <script src="app.js"></script>
+</body>
+
+</html>
