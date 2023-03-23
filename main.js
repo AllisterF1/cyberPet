@@ -24,9 +24,9 @@ class Animal {
     constructor(name) {
        super(name)
     }
-    play() {
+    playFetch() {
        happinessLevel.value += 15;
-       petEmotion.textContent = `${pet.name} loves going for a walk!`;
+       petEmotion.textContent = `${pet.name} loves to play fetch! Again?!`;
     }
  }
  

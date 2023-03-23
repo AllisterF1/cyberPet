@@ -39,14 +39,57 @@ const decreaseHappiness = () => {
    }
 };
 
+// dogImg.addEventListener("click", () => {
+//    welcomeScreen.style.display = "none";
+//    petInterface.style.display = "block";
+//    getName();
+//    petImg.src = "images/animal-dog.jpg";
+//    pet = new Dog(petName);
+//    insertName.textContent = pet.name;
+//    decreaseHappiness();
+// });
+const animalSelect = document.getElementById('animal-select');
+
+animalSelect.addEventListener('change', () => {
+   const selectedAnimal = animalSelect.value;
+   if (selectedAnimal === 'dog') {
+     playButton.id = 'play-fetch-button';
+   } else if (selectedAnimal === 'cat') {
+     playButton.id = 'play-toy-button';
+   } else {
+    
+   }
+ });
+
+// animalSelect.addEventListener('change', () => {
+//   const selectedAnimal = animalSelect.value;
+//   if (selectedAnimal === 'dog') {
+//     playButton.id = 'play-fetch-button';
+//   } else if (selectedAnimal === 'cat') {
+//     playButton.id = 'play-toy-button';
+//   } else {
+//     // handle other animals
+//   }
+// });
+const playButton = document.getElementById('play-button');
+const playFetchBtn = document.querySelector("#play-fetch-button");
+
 dogImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
+     
    getName();
    petImg.src = "images/animal-dog.jpg";
    pet = new Dog(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+
+   playFetchBtn.style.display = "block"; 
+});
+
+playFetchBtn.addEventListener("click", () => {
+   petEmotion.style.display = "block";
+   pet.playFetch();
 });
 
 catImg.addEventListener("click", () => {
@@ -98,6 +141,8 @@ playBtn.addEventListener("click", () => {
    petEmotion.style.display = "block";
    pet.play();
 });
+
+
 
 // start again option
 startAgain.addEventListener("click", () => {
