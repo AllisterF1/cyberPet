@@ -55,12 +55,45 @@ catImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
    getName();
-   petImg.src = "images/animal-cat.jpg";
+   petImg.src = "images/pandaNormal.png";
    pet = new Cat(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
-   playBtn.innerHTML = 'Groom';
+
+   strokeBtn.innerHTML = "Tell a joke";
+   strokeBtn.addEventListener("mouseenter", () => {
+      petImg.src = "images/pandaBored.png";
+   });
+   strokeBtn.addEventListener("click", () => {
+      petImg.src = "images/pandaLaugh.png";
+   });
+   feedBtn.addEventListener("mouseenter", () => {
+      petImg.src = "images/pandaHot.png";
+   });
+   feedBtn.addEventListener("click", () => {
+      petImg.src = "images/pandaEat.png";
+   });
+   washBtn.innerHTML = "Train";
+   washBtn.addEventListener("mouseenter", () => {
+      petImg.src = "images/pandaFight.png";
+   });
+   washBtn.addEventListener("click", () => {
+      petImg.src = "images/pandaSport.png";
+   });
+   playBtn.innerHTML = "Sleep";
+   playBtn.addEventListener("mouseenter", () => {
+      petImg.src = "images/pandaZzz.png";
+   });
+   playBtn.addEventListener("click", () => {
+      petImg.src = "images/pandaSleep.png";
+   });
+   startAgain.addEventListener("mouseenter", ()=> {
+      petImg.src = "images/pandaAngry.png";
+   });
+
+   
    strokeBtn.innerHTML = 'Stroke';
+
 });
 
 fishImg.addEventListener("click", () => {
@@ -109,8 +142,9 @@ playBtn.addEventListener("click", () => {
 
 // start again option
 startAgain.addEventListener("click", () => {
-   petInterface.style.display = "none";
-   welcomeScreen.style.display = "block";
-   petEmotion.textContent = ``;
-   happinessLevel.value = 50;
+   // petInterface.style.display = "none";
+   // welcomeScreen.style.display = "block";
+   // petEmotion.textContent = ``;
+   // happinessLevel.value = 50;
+   location.reload();
 });
