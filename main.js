@@ -1,4 +1,3 @@
-
 class Animal {
     constructor(name) {
        this._name = name;
@@ -49,7 +48,6 @@ class Animal {
        petEmotion.textContent = `${pet.name} doesn't like being played with.`;
     }
  }
-
  class Lizard extends Animal {
    constructor(name) {
       super(name)
@@ -59,3 +57,4 @@ class Animal {
       petEmotion.textContent = `No way. ${pet.name} would rather bask in the heat alone.`;
    }
 }
+
