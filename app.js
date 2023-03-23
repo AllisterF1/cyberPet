@@ -39,57 +39,16 @@ const decreaseHappiness = () => {
    }
 };
 
-// dogImg.addEventListener("click", () => {
-//    welcomeScreen.style.display = "none";
-//    petInterface.style.display = "block";
-//    getName();
-//    petImg.src = "images/animal-dog.jpg";
-//    pet = new Dog(petName);
-//    insertName.textContent = pet.name;
-//    decreaseHappiness();
-// });
-const animalSelect = document.getElementById('animal-select');
-
-animalSelect.addEventListener('change', () => {
-   const selectedAnimal = animalSelect.value;
-   if (selectedAnimal === 'dog') {
-     playButton.id = 'play-fetch-button';
-   } else if (selectedAnimal === 'cat') {
-     playButton.id = 'play-toy-button';
-   } else {
-    
-   }
- });
-
-// animalSelect.addEventListener('change', () => {
-//   const selectedAnimal = animalSelect.value;
-//   if (selectedAnimal === 'dog') {
-//     playButton.id = 'play-fetch-button';
-//   } else if (selectedAnimal === 'cat') {
-//     playButton.id = 'play-toy-button';
-//   } else {
-//     // handle other animals
-//   }
-// });
-const playButton = document.getElementById('play-button');
-const playFetchBtn = document.querySelector("#play-fetch-button");
-
 dogImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
-     
    getName();
    petImg.src = "images/animal-dog.jpg";
    pet = new Dog(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
-
-   playFetchBtn.style.display = "block"; 
-});
-
-playFetchBtn.addEventListener("click", () => {
-   petEmotion.style.display = "block";
-   pet.playFetch();
+   playBtn.innerHTML = 'Walk';
+   strokeBtn.innerHTML = 'Stroke';
 });
 
 catImg.addEventListener("click", () => {
@@ -100,6 +59,8 @@ catImg.addEventListener("click", () => {
    pet = new Cat(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Groom';
+   strokeBtn.innerHTML = 'Stroke';
 });
 
 fishImg.addEventListener("click", () => {
@@ -110,6 +71,8 @@ fishImg.addEventListener("click", () => {
    pet = new Fish(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Tap glass';
+   strokeBtn.innerHTML = 'Stroke';
 });
 
 lizardImg.addEventListener("click", () => {
@@ -120,6 +83,8 @@ lizardImg.addEventListener("click", () => {
    pet = new Lizard(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Bask';
+   strokeBtn.innerHTML = 'Head Scratch';
 });
 
 feedBtn.addEventListener("click", () => {
@@ -141,8 +106,6 @@ playBtn.addEventListener("click", () => {
    petEmotion.style.display = "block";
    pet.play();
 });
-
-
 
 // start again option
 startAgain.addEventListener("click", () => {
