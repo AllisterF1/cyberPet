@@ -47,6 +47,8 @@ dogImg.addEventListener("click", () => {
    pet = new Dog(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Walk';
+   strokeBtn.innerHTML = 'Stroke';
 });
 
 catImg.addEventListener("click", () => {
@@ -57,6 +59,8 @@ catImg.addEventListener("click", () => {
    pet = new Cat(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Groom';
+   strokeBtn.innerHTML = 'Stroke';
 });
 
 fishImg.addEventListener("click", () => {
@@ -67,6 +71,8 @@ fishImg.addEventListener("click", () => {
    pet = new Fish(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Tap glass';
+   strokeBtn.innerHTML = 'Stroke';
 });
 
 lizardImg.addEventListener("click", () => {
@@ -77,6 +83,8 @@ lizardImg.addEventListener("click", () => {
    pet = new Lizard(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
+   playBtn.innerHTML = 'Bask';
+   strokeBtn.innerHTML = 'Head Scratch';
 });
 
 feedBtn.addEventListener("click", () => {
