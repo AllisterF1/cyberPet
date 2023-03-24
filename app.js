@@ -51,6 +51,13 @@ dogImg.addEventListener("click", () => {
    decreaseHappiness();
    playBtn.innerHTML = 'Walk';
    strokeBtn.innerHTML = 'Stroke';
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
 });
 
 catImg.addEventListener("click", () => {
@@ -112,6 +119,13 @@ fishImg.addEventListener("click", () => {
    decreaseHappiness();
    playBtn.innerHTML = 'Tap glass';
    strokeBtn.innerHTML = 'Stroke';
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
 });
 
 lizardImg.addEventListener("click", () => {
@@ -124,6 +138,13 @@ lizardImg.addEventListener("click", () => {
    decreaseHappiness();
    playBtn.innerHTML = 'Bask';
    strokeBtn.innerHTML = 'Head Scratch';
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
 });
 
 feedBtn.addEventListener("click", () => {
