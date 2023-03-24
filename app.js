@@ -1,5 +1,3 @@
-// this code seems to make the UI and add interaction with the UI
-
 // images the user will interact with
 const dogImg = document.querySelector("#dog-img");
 const catImg = document.querySelector("#cat-img");
@@ -18,12 +16,11 @@ const feedBtn = document.querySelector("#feed-button");
 const washBtn = document.querySelector("#wash-button");
 const strokeBtn = document.querySelector("#stroke-button");
 const playBtn = document.querySelector("#play-button");
-const gameOver = document.querySelector("#game-over");
 // variables that will be updated during the programme
 let pet;
 let petName;
 
-petInterface.style.display = "none";                                    // linked on all animals
+petInterface.style.display = "none";
 
 // function that asks user for name of pet
 const getName = () => {
@@ -140,23 +137,8 @@ playBtn.addEventListener("click", () => {
    pet.play();
 });
 
-// -- GAME OVER -- //
-
-// NEED TO ADD A FUNCTION THAT CHECKS IF THE PROGRESS BAR IS AT 0
-// IF IT IS, THEN THE GAME IS OVER
-// IF IT IS NOT, THEN THE GAME CONTINUES
-// ADD WINDOW ALERT TO SAY GAME OVER
-const checkGameOver = () => {
-   if (happinessLevel.value === 0) {
-      petInterface.style.display = "none";
-      gameOver.style.display = "block";
-      window.alert("Game Over"); // this is not working and not meant to be pernament
-   }
-}
-
 // start again option
 startAgain.addEventListener("click", () => {
-
    // petInterface.style.display = "none";
    // welcomeScreen.style.display = "block";
    // petEmotion.textContent = ``;
