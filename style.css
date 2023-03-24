@@ -7,10 +7,22 @@
 
 body {
   background-image: url("images/background3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   line-height: 1.5;
   font-weight: lighter;
   font-family: 'Press Start 2P', cursive;
   height: calc(100vh - 1em);
+}
+
+.no-style1 {
+  width: auto;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .no-style {
@@ -256,6 +268,7 @@ progress[value]::-webkit-progress-value {
     100% {transform: translate(0, 0)}
     }
 @media (min-width: 900px) {
+
   .wrapper {
     width: 80%;
     max-width: 1250px;
@@ -307,3 +320,6 @@ progress[value]::-webkit-progress-value {
   }
 }
 
+.no-style1 {
+  width: 70%;
+}
