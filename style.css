@@ -223,11 +223,13 @@ progress[value]::-webkit-progress-value {
 
 .image:nth-child(2) .animal-img {
   animation: cat 1s linear infinite;
+
 }
 
 .image:nth-child(3) .animal-img {
   animation: fish 1s linear infinite;
 }
+
 
 .image:nth-child(4) .animal-img {
   animation: lizard 1s linear infinite;
@@ -330,6 +332,8 @@ progress[value]::-webkit-progress-value {
   width: 70%;
 }
 
+
 .grow {
   scale: 1.4;
 }
+

@@ -100,6 +100,7 @@ catImg.addEventListener("click", () => {
    startAgain.addEventListener("mouseenter", ()=> {
       petImg.src = "images/pandaAngry1.png";
    });
+
    function checkHappinessLevel() {
       
       if (happinessLevel.value <= 0.0) {
@@ -107,6 +108,7 @@ catImg.addEventListener("click", () => {
     }
   }
   setInterval(checkHappinessLevel, 1000);
+
 });
 
 fishImg.addEventListener("click", () => {
@@ -189,3 +191,6 @@ function gameOver() {
    buttons.classList.add('opaque');
    startAgain.classList.add('grow');
 }
+
+
+
