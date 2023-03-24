@@ -223,11 +223,13 @@ progress[value]::-webkit-progress-value {
 
 .image:nth-child(2) .animal-img {
   animation: cat 1s linear infinite;
+
 }
 
 .image:nth-child(3) .animal-img {
   animation: fish 1s linear infinite;
 }
+
 
 .image:nth-child(4) .animal-img {
   animation: lizard 1s linear infinite;
@@ -313,7 +315,13 @@ progress[value]::-webkit-progress-value {
     display: flex;
     justify-content: space-evenly;
     padding: 2em 0;
+    
   }
+
+  .opaque {
+    opacity: 0.5;
+  }  
+
 
   .action-button {
     width: 15%;
@@ -323,3 +331,9 @@ progress[value]::-webkit-progress-value {
 .no-style1 {
   width: 70%;
 }
+
+
+.grow {
+  scale: 1.4;
+}
+

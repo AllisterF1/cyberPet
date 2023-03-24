@@ -16,6 +16,8 @@ const feedBtn = document.querySelector("#feed-button");
 const washBtn = document.querySelector("#wash-button");
 const strokeBtn = document.querySelector("#stroke-button");
 const playBtn = document.querySelector("#play-button");
+const buttons = document.querySelector('.buttons')
+
 // variables that will be updated during the programme
 let pet;
 let petName;
@@ -49,6 +51,13 @@ dogImg.addEventListener("click", () => {
    decreaseHappiness();
    playBtn.innerHTML = 'Walk';
    strokeBtn.innerHTML = 'Stroke';
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
 });
 
 catImg.addEventListener("click", () => {
@@ -91,6 +100,15 @@ catImg.addEventListener("click", () => {
    startAgain.addEventListener("mouseenter", ()=> {
       petImg.src = "images/pandaAngry1.png";
    });
+
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
+
 });
 
 fishImg.addEventListener("click", () => {
@@ -103,6 +121,13 @@ fishImg.addEventListener("click", () => {
    decreaseHappiness();
    playBtn.innerHTML = 'Tap glass';
    strokeBtn.innerHTML = 'Stroke';
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
 });
 
 lizardImg.addEventListener("click", () => {
@@ -115,6 +140,13 @@ lizardImg.addEventListener("click", () => {
    decreaseHappiness();
    playBtn.innerHTML = 'Bask';
    strokeBtn.innerHTML = 'Head Scratch';
+   function checkHappinessLevel() {
+      
+      if (happinessLevel.value <= 0.0) {
+      gameOver();
+    }
+  }
+  setInterval(checkHappinessLevel, 1000);
 });
 
 feedBtn.addEventListener("click", () => {
@@ -143,5 +175,22 @@ startAgain.addEventListener("click", () => {
    // welcomeScreen.style.display = "block";
    // petEmotion.textContent = ``;
    // happinessLevel.value = 50;
+   // buttons.classList.remove('opaque');
    location.reload();
 });
+
+function gameOver() {
+   petImg.src = "images/gameover.png";
+   console.log('gameover');
+   petEmotion.style.color = '#C21807';
+   petEmotion.textContent = `Oh no! ${pet.name} was taken away by the RSPCA due to your lack of care.`;
+   document.getElementById('feed-button').disabled = true;
+   document.getElementById('stroke-button').disabled = true;
+   document.getElementById('wash-button').disabled = true;
+   document.getElementById('play-button').disabled = true;
+   buttons.classList.add('opaque');
+   startAgain.classList.add('grow');
+}
+
+
+
