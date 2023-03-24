@@ -2,9 +2,25 @@ class Animal {
    constructor(name) {
       super(name)
    }
+   feed() {
+      petEmotion.style.color = 'forestgreen';
+      happinessLevel.value += 20;
+      petEmotion.textContent = `${pet.name} loves food!`;
+   }
    play() {
       happinessLevel.value += 10;
-      petEmotion.textContent = ` ${pet.name} enjoys grooming itself!`;
+      petEmotion.style.color = 'forestgreen';
+      petEmotion.textContent = ` ${pet.name} enjoys sleeping!`;
+   }
+   stroke() {
+      happinessLevel.value += 5;
+      petEmotion.style.color = 'forestgreen';
+      petEmotion.textContent = `${pet.name} likes jokes.`;
+   }
+   wash() {
+      happinessLevel.value -= 15;
+      petEmotion.style.color = '#C21807';
+      petEmotion.textContent = `Oh! ${pet.name} hates any type of exercise.`;
    }
 }
 
