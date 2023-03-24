@@ -313,13 +313,7 @@ progress[value]::-webkit-progress-value {
     display: flex;
     justify-content: space-evenly;
     padding: 2em 0;
-    
   }
-
-  .opaque {
-    opacity: 0.5;
-  }  
-
 
   .action-button {
     width: 15%;
@@ -328,8 +322,4 @@ progress[value]::-webkit-progress-value {
 
 .no-style1 {
   width: 70%;
-}
-
-.grow {
-  scale: 1.4;
 }
