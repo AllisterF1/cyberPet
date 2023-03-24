@@ -112,7 +112,7 @@ const checkGameOver = () => {
    if (happinessLevel.value === 0) {
       petInterface.style.display = "none";
       gameOver.style.display = "block";
-      window.alert("Game Over");
+      window.alert("Game Over"); // this is not working and not meant to be pernament
    }
 }
 
