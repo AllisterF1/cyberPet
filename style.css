@@ -215,7 +215,10 @@ progress[value]::-webkit-progress-value {
 .animal-img {
   width: 400px;
   height: 400px;
+  opacity: 80%;
+  filter: grayscale(100%);
 }
+
 /* add characters selection animation */
 .image:nth-child(1) .animal-img {
   animation: dog 1s linear infinite;
@@ -234,10 +237,60 @@ progress[value]::-webkit-progress-value {
 .image:nth-child(4) .animal-img {
   animation: lizard 1s linear infinite;
 }
+
+
 .animal-img:hover {
   transform: scale(1.1);
+  transition: ease-in 0.1s;
   filter: brightness(120%);
+  opacity: 100%;
 }
+
+.dog-txt {
+  position: absolute;
+  color: white;
+  opacity: 0%;
+}
+
+.dog-txt:hover {
+  color: white;
+  opacity: 100%;
+}
+
+.cat-txt {
+  position: absolute;
+  color: white;
+  opacity: 0%;
+}
+
+.cat-txt:hover {
+  color: white;
+  opacity: 100%;
+}
+
+.lizard-txt {
+  position: absolute;
+  color: white;
+  opacity: 0%;
+}
+
+.lizard-txt:hover {
+  color: white;
+  opacity: 100%;
+}
+
+.fish-txt {
+  position: absolute;
+  color: white;
+  opacity: 0%;
+}
+
+.fish-txt:hover {
+  transition: ease-in 0.2s;
+  color: white;
+  opacity: 100%;
+}
+
 @keyframes dog {
   0% {transform: translate(0, 0)}
   25% {transform: translate(-10px, -10px)}
@@ -253,7 +306,7 @@ progress[value]::-webkit-progress-value {
     75% {transform: translate(10px, -10px)}
     100% {transform: translate(0, 0)}
     }
-    
+
     @keyframes fish {
     0% {transform: translate(0, 0)}
     25% {transform: translate(10px, -10px)}
