@@ -45,12 +45,44 @@ dogImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
    getName();
-   petImg.src = "images/animal-dog.jpg";
+   petImg.src = "images/dogidle.gif";
    pet = new Dog(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
-   playBtn.innerHTML = 'Walk';
+   
    strokeBtn.innerHTML = 'Stroke';
+
+   strokeBtn.addEventListener("click", () => {
+      petImg.src = "images/dogstroke.png";
+      setTimeout(() => {
+         petImg.src = "images/dogidle.gif";
+       }, 3000);
+   });
+
+   feedBtn.addEventListener("click", () => {
+      petImg.src = "images/dogfeed.webp";
+      setTimeout(() => {
+         petImg.src = "images/dogidle.gif";
+       }, 3000);
+   });
+   washBtn.innerHTML = "Wash";
+   washBtn.addEventListener("click", () => {
+      petImg.src = "images/dogwash.webp";
+      setTimeout(() => {
+         petImg.src = "images/dogidle.gif";
+       }, 3000);
+   });
+   playBtn.innerHTML = 'Walk';
+ 
+   playBtn.addEventListener("click", () => {
+      petImg.src = "images/dogwalk.webp";
+      setTimeout(() => {
+         petImg.src = "images/dogidle.gif";
+       }, 3000);
+   });
+   startAgain.addEventListener("mouseenter", ()=> {
+      petImg.src = "images/dogsleep.webp";
+   });
    function checkHappinessLevel() {
       
       if (happinessLevel.value <= 0.0) {
@@ -100,6 +132,7 @@ catImg.addEventListener("click", () => {
    startAgain.addEventListener("mouseenter", ()=> {
       petImg.src = "images/pandaAngry1.png";
    });
+
    function checkHappinessLevel() {
       
       if (happinessLevel.value <= 0.0) {
@@ -107,18 +140,45 @@ catImg.addEventListener("click", () => {
     }
   }
   setInterval(checkHappinessLevel, 1000);
+
 });
 
 fishImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
    getName();
-   petImg.src = "images/animal-fish.jpg";
+   petImg.src = "images/fish1.png";
    pet = new Fish(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
    playBtn.innerHTML = 'Tap glass';
+   playBtn.addEventListener("click", () => {
+      petImg.src = "images/fishtap.png";
+      setTimeout(() => {
+         petImg.src = "images/fish1.png";
+       }, 2000);
+   });
    strokeBtn.innerHTML = 'Stroke';
+   strokeBtn.addEventListener("click", () => {
+      petImg.src = "images/fishstroke.png";
+      setTimeout(() => {
+         petImg.src = "images/fish1.png";
+       }, 2000);
+   });
+   washBtn.innerHTML = 'Wash';
+   washBtn.addEventListener("click", () => {
+      petImg.src = "images/fishwash.png";
+      setTimeout(() => {
+         petImg.src = "images/fish1.png";
+       }, 2000);
+   });
+   feedBtn.addEventListener("click", () => {
+      petImg.src = "images/fishfeed.png";
+      setTimeout(() => {
+         petImg.src = "images/fish1.png";
+       }, 2000);
+   });
+   
    function checkHappinessLevel() {
       
       if (happinessLevel.value <= 0.0) {
@@ -132,12 +192,37 @@ lizardImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
    getName();
-   petImg.src = "images/animal-lizard.jpg";
+   petImg.src = "images/lizard.gif";
    pet = new Lizard(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
    playBtn.innerHTML = 'Bask';
+   playBtn.addEventListener("click", () => {
+      petImg.src = "images/lizardbask.gif";
+      setTimeout(() => {
+         petImg.src = "images/lizard.gif";
+       }, 4000);
+   });
    strokeBtn.innerHTML = 'Head Scratch';
+   strokeBtn.addEventListener("click", () => {
+      petImg.src = "images/lizardheadpat.gif";
+      setTimeout(() => {
+         petImg.src = "images/lizard.gif";
+       }, 4000);
+   });
+   feedBtn.addEventListener("click", () => {
+      petImg.src = "images/lizardeat.gif";
+      setTimeout(() => {
+         petImg.src = "images/lizard.gif";
+       }, 4000);
+   });
+   washBtn.innerHTML = 'Wash';
+   washBtn.addEventListener("click", () => {
+      petImg.src = "images/lizardwash.gif";
+      setTimeout(() => {
+         petImg.src = "images/lizard.gif";
+       }, 4000);
+   });
    function checkHappinessLevel() {
       
       if (happinessLevel.value <= 0.0) {
@@ -189,3 +274,6 @@ function gameOver() {
    buttons.classList.add('opaque');
    startAgain.classList.add('grow');
 }
+
+
+
