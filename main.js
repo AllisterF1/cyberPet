@@ -28,13 +28,13 @@ class Dog extends Animal {
    }
    play() {
       happinessLevel.value += 20;
-      petEmotion.style.color = '#C21807';
+      petEmotion.style.color = 'forestgreen';
       petEmotion.textContent = `${pet.name} loves going for a walk!`;
    }
    
 }
 
-class Cat extends Animal {
+class panda extends Animal {
    constructor(name) {
       super(name)
    }

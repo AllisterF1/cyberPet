@@ -85,16 +85,17 @@ progress[value] {
   display: inline-block;
   -webkit-appearance: none;
   appearance: none;
+  background-color: transparent;
 }
 
 progress[value]::-webkit-progress-bar {
-  background-color: #eee;
+  background-color: orangered;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 progress[value]::-webkit-progress-value {
-  background: forestgreen;
+  background: rgb(29, 155, 29);
   border-radius: 5px;
 }
 
@@ -225,7 +226,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .image:nth-child(2) .animal-img {
-  animation: cat 1s linear infinite;
+  animation: panda 1s linear infinite;
 
 }
 
@@ -238,58 +239,36 @@ progress[value]::-webkit-progress-value {
   animation: lizard 1s linear infinite;
 }
 
+  .image {
+    position: relative;
+  }
 
-.animal-img:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.1s;
-  filter: brightness(120%);
-  opacity: 100%;
-}
+  .animal-img:hover {
+    transform: scale(1.1);
+    transition: ease-in 0.5s;
+    filter: brightness(120%);
+    opacity: 100%;
+  }
 
-.dog-txt {
-  position: absolute;
-  color: white;
-  opacity: 0%;
-}
+  .dog-txt,
+  .panda-txt,
+  .fish-txt,
+  .lizard-txt {
+    position: absolute;
+    color: white;
+    opacity: 0%;
+    text-align: right;
+  }
 
-.dog-txt:hover {
-  color: white;
-  opacity: 100%;
-}
+  .dog-img:hover + .dog-txt,
+  .panda-img:hover + .panda-txt,
+  .fish-img:hover + .fish-txt,
+  .lizard-img:hover + .lizard-txt {
+    color: white;
+    opacity: 100%;
+  }
 
-.cat-txt {
-  position: absolute;
-  color: white;
-  opacity: 0%;
-}
 
-.cat-txt:hover {
-  color: white;
-  opacity: 100%;
-}
-
-.lizard-txt {
-  position: absolute;
-  color: white;
-  opacity: 0%;
-}
-
-.lizard-txt:hover {
-  color: white;
-  opacity: 100%;
-}
-
-.fish-txt {
-  position: absolute;
-  color: white;
-  opacity: 0%;
-}
-
-.fish-txt:hover {
-  transition: ease-in 0.2s;
-  color: white;
-  opacity: 100%;
-}
 
 @keyframes dog {
   0% {transform: translate(0, 0)}
@@ -299,7 +278,7 @@ progress[value]::-webkit-progress-value {
     100% {transform: translate(0, 0)}
     }
     
-    @keyframes cat {
+    @keyframes panda {
     0% {transform: translate(0, 0)}
     25% {transform: translate(-10px, 10px)}
     50% {transform: translate(0, 0)}
@@ -367,7 +346,10 @@ progress[value]::-webkit-progress-value {
   .buttons {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-end;
     padding: 2em 0;
+    
+    
     
   }
 
@@ -390,3 +372,12 @@ progress[value]::-webkit-progress-value {
   scale: 1.4;
 }
 
+#pet-emotion{
+  font-size: small;
+}
+
+#pet-img{
+  max-height: 220px!important;
+  object-fit: scale-down;
+
+}

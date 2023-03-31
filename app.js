@@ -1,6 +1,6 @@
 // images the user will interact with
 const dogImg = document.querySelector("#dog-img");
-const catImg = document.querySelector("#cat-img");
+const pandaImg = document.querySelector("#panda-img");
 const fishImg = document.querySelector("#fish-img");
 const lizardImg = document.querySelector("#lizard-img");
 // elements of interface
@@ -17,8 +17,10 @@ const washBtn = document.querySelector("#wash-button");
 const strokeBtn = document.querySelector("#stroke-button");
 const playBtn = document.querySelector("#play-button");
 const buttons = document.querySelector('.buttons')
+const gameOverAudio = new Audio("/sounds/gameover.mp3");
+const dangerAudio =new Audio("/sounds/danger.wav");
 
-// variables that will be updated during the programme
+
 let pet;
 let petName;
 
@@ -83,21 +85,24 @@ dogImg.addEventListener("click", () => {
    startAgain.addEventListener("mouseenter", ()=> {
       petImg.src = "images/dogsleep.webp";
    });
-   function checkHappinessLevel() {
-      
+   function checkHappinessLevel() { 
       if (happinessLevel.value <= 0.0) {
       gameOver();
-    }
-  }
-  setInterval(checkHappinessLevel, 1000);
+    } else if (happinessLevel.value <= 25) {
+      danger();
+    } else if (happinessLevel.value >=30) {
+      audio.pause();
+    } 
+ }
+ setInterval(checkHappinessLevel, 100);
 });
 
-catImg.addEventListener("click", () => {
+pandaImg.addEventListener("click", () => {
    welcomeScreen.style.display = "none";
    petInterface.style.display = "block";
    getName();
    petImg.src = "images/pandaNormal1.png";
-   pet = new Cat(petName);
+   pet = new panda(petName);
    insertName.textContent = pet.name;
    decreaseHappiness();
    petImg.style.borderRadius = "0";
@@ -132,15 +137,16 @@ catImg.addEventListener("click", () => {
    startAgain.addEventListener("mouseenter", ()=> {
       petImg.src = "images/pandaAngry1.png";
    });
-
-   function checkHappinessLevel() {
-      
+   function checkHappinessLevel() { 
       if (happinessLevel.value <= 0.0) {
       gameOver();
-    }
-  }
-  setInterval(checkHappinessLevel, 1000);
-
+    } else if (happinessLevel.value <= 25) {
+      danger();
+    } else if (happinessLevel.value >=30) {
+      audio.pause();
+    } 
+ }
+ setInterval(checkHappinessLevel, 100);
 });
 
 fishImg.addEventListener("click", () => {
@@ -178,14 +184,16 @@ fishImg.addEventListener("click", () => {
          petImg.src = "images/fish1.png";
        }, 2000);
    });
-   
-   function checkHappinessLevel() {
-      
+   function checkHappinessLevel() { 
       if (happinessLevel.value <= 0.0) {
       gameOver();
-    }
-  }
-  setInterval(checkHappinessLevel, 1000);
+    } else if (happinessLevel.value <= 25) {
+      danger();
+    } else if (happinessLevel.value >=30) {
+      audio.pause();
+    } 
+ }
+ setInterval(checkHappinessLevel, 100);
 });
 
 lizardImg.addEventListener("click", () => {
@@ -223,13 +231,16 @@ lizardImg.addEventListener("click", () => {
          petImg.src = "images/lizard.gif";
        }, 4000);
    });
-   function checkHappinessLevel() {
-      
-      if (happinessLevel.value <= 0.0) {
-      gameOver();
-    }
+   function checkHappinessLevel() { 
+       if (happinessLevel.value <= 0.0) {
+       gameOver();
+     } else if (happinessLevel.value <= 25) {
+       danger();
+     } else if (happinessLevel.value >=30) {
+       audio.pause();
+     } 
   }
-  setInterval(checkHappinessLevel, 1000);
+  setInterval(checkHappinessLevel, 100);
 });
 
 feedBtn.addEventListener("click", () => {
@@ -252,14 +263,14 @@ playBtn.addEventListener("click", () => {
    pet.play();
 });
 
-// start again option
+// start again option page refresh works better and is cleaner option
 startAgain.addEventListener("click", () => {
    // petInterface.style.display = "none";
    // welcomeScreen.style.display = "block";
    // petEmotion.textContent = ``;
    // happinessLevel.value = 50;
    // buttons.classList.remove('opaque');
-   location.reload();
+   lopandaion.reload();
 });
 
 function gameOver() {
@@ -273,6 +284,13 @@ function gameOver() {
    document.getElementById('play-button').disabled = true;
    buttons.classList.add('opaque');
    startAgain.classList.add('grow');
+   gameOverAudio.play();
+}
+
+
+
+function danger() {
+   dangerAudio.play();
 }
 
 
