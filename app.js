@@ -270,7 +270,7 @@ startAgain.addEventListener("click", () => {
    // petEmotion.textContent = ``;
    // happinessLevel.value = 50;
    // buttons.classList.remove('opaque');
-   lopandaion.reload();
+   location.reload();
 });
 
 function gameOver() {
