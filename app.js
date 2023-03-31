@@ -55,21 +55,21 @@ dogImg.addEventListener("click", () => {
    strokeBtn.innerHTML = 'Stroke';
 
    strokeBtn.addEventListener("click", () => {
-      petImg.src = "images/dogstroke.png";
+      petImg.src = "./images/dogstroke copy.png";
       setTimeout(() => {
          petImg.src = "images/dogidle.gif";
        }, 3000);
    });
 
    feedBtn.addEventListener("click", () => {
-      petImg.src = "images/dogfeed.webp";
+      petImg.src = "./images/dogfeed copy.webp";
       setTimeout(() => {
          petImg.src = "images/dogidle.gif";
        }, 3000);
    });
    washBtn.innerHTML = "Wash";
    washBtn.addEventListener("click", () => {
-      petImg.src = "images/dogwash.webp";
+      petImg.src = "./images/dogwash copy.webp";
       setTimeout(() => {
          petImg.src = "images/dogidle.gif";
        }, 3000);
@@ -77,13 +77,13 @@ dogImg.addEventListener("click", () => {
    playBtn.innerHTML = 'Walk';
  
    playBtn.addEventListener("click", () => {
-      petImg.src = "images/dogwalk.webp";
+      petImg.src = "./images/dogwalk copy.webp";
       setTimeout(() => {
          petImg.src = "images/dogidle.gif";
        }, 3000);
    });
    startAgain.addEventListener("mouseenter", ()=> {
-      petImg.src = "images/dogsleep.webp";
+      petImg.src = "./images/dogsleep copy.webp";
    });
    function checkHappinessLevel() { 
       if (happinessLevel.value <= 0.0) {
